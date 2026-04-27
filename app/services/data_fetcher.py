@@ -5,9 +5,6 @@ from datetime import datetime
 
 
 def fetch_and_save_data(url: str, save_dir: str = "data/raw"):
-    """
-    Fetch data from API and save as raw JSON file
-    """
 
     try:
         # Step 1: Make API request
@@ -26,7 +23,7 @@ def fetch_and_save_data(url: str, save_dir: str = "data/raw"):
 
         # Step 5: Create filename with timestamp
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        file_path = os.path.join(save_dir, f"raw_data_{timestamp}.json")
+        file_path = os.path.join(save_dir, f"comments.json")
 
         # Step 6: Save JSON data
         with open(file_path, "w", encoding="utf-8") as file:
